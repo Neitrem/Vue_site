@@ -3,15 +3,7 @@
         <top-panel></top-panel>
         <div class="wrap">
             <div class="left-panel">
-                <div class="nav">
-                    <div class="nav__container">
-                        <ul class="list">
-                            <li class="list-el">Главная</li>
-                            <li class="list-el">Авто</li>
-                            <li class="list-el">Недвижимость</li>
-                        </ul>
-                    </div>
-                </div>
+                <nav-panel></nav-panel>
             </div>
             <div class="line"></div>
             <div class="rigth-panel">
@@ -22,11 +14,16 @@
 </template>
 
 <script>
-import TopPanel from '@/components/TopPanel'
+import NavPanel from '@/components/NavPanel';
+import TopPanel from '@/components/TopPanel';
+
+
+/* eslint-disable vue/no-unused-components */
+
 
 export default {
     components: {
-        TopPanel
+        TopPanel, NavPanel
     },
     data () {
         return {
