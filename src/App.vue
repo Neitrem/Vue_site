@@ -3,11 +3,16 @@
         <top-panel></top-panel>
         <div class="wrap">
             <div class="left-panel">
-                <nav-panel></nav-panel>
+                <div class="left-panel__container">
+                    <nav-panel></nav-panel>
+                    <left-widget></left-widget>
+                </div>
             </div>
-            <div class="line"></div>
+            <!-- <div class="line"></div>-->
             <div class="rigth-panel">
-                
+                <div class="right-panel__container">
+                    <img class="img" src="@/assets/home_page_img.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -16,6 +21,7 @@
 <script>
 import NavPanel from '@/components/NavPanel';
 import TopPanel from '@/components/TopPanel';
+import LeftWidget from '@/components/LeftWidget';
 
 
 /* eslint-disable vue/no-unused-components */
@@ -23,7 +29,7 @@ import TopPanel from '@/components/TopPanel';
 
 export default {
     components: {
-        TopPanel, NavPanel
+        TopPanel, NavPanel, LeftWidget
     },
     data () {
         return {
@@ -42,9 +48,18 @@ export default {
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: black;
 }
 
+.link:hover {
+    border-bottom: 1px solid gray;
+}
+
+.link:active {
+    font-weight: 600;
+}
 
 .post {
     margin-top: 15px;
@@ -82,15 +97,28 @@ form {
     height: 100%;
 }
 
-.rigth-panel {
-    width: 60%;
+.left-panel__container {
+    margin: 15px;
+    border-right: 1px solid gray;;
     height: 100%;
 }
 
-.line {
-    margin: 15px 0 15px 0;
-    border-left: 1px solid gray;
+.rigth-panel {
+    display: flex;
+    width: 80%;
     height: 100%;
+}
+
+.right-panel__container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    margin: 15px;
+    border-radius: 15px;
+    width: 80%;
 }
 
 </style>

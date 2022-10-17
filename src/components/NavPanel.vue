@@ -2,9 +2,15 @@
     <div class="nav">
         <div class="nav__container">
             <ul class="list">
-                <li class="list-el">Главная</li>
-                <li class="list-el">Авто</li>
-                <li class="list-el">Недвижимость</li>
+                <li class="list-el">
+                    <a class="link" href="#">Главная</a>
+                </li>
+                <li class="list-el">
+                    <a class="link" href="#">Авто</a>
+                </li>
+                <li class="list-el">
+                    <a class="link" href="#">Недвижимость</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -17,13 +23,12 @@ export default {
 </script>
 
 <style>
+
 .nav__container {
-    margin: 15px;
-    display: flex;
+    margin:15px;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
-
-    border-right: 1px solid gray;
 
     height: 100%;
 }
@@ -34,6 +39,7 @@ export default {
 }
 
 .list-el {
-
+    padding: 5px;
+    margin-bottom: 10px;
 }
 </style>

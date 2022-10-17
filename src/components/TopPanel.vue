@@ -30,12 +30,14 @@ export default {
     display: inline-block;
     font-size: 20px;
     font-weight: 500;
+
+    margin-right: 60px;
 }
 
 .logo {
     display: inline-block;
     width: fit-content;
-
+    margin-left: 60px;
     font-size: 70px;
     font-weight: 600;
     color: transparent;
