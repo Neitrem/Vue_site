@@ -2,11 +2,14 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "description": "```\r npm install\r ```",
+  "author": "",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "main": "babel.config.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
@@ -39,5 +42,16 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "_id": "project@0.1.0",
+  "bugs": {
+    "url": "https://github.com/Neitrem/Vue_site/issues"
+  },
+  "homepage": "https://github.com/Neitrem/Vue_site#readme",
+  "license": "ISC",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neitrem/Vue_site.git"
+  }
 }
