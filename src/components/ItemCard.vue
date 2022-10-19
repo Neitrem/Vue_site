@@ -6,12 +6,14 @@
             <p class="cost">{{  }} $</p>
             <div  class="stats">
                 <div v-if="type === 'car'" class="stats__car">
-                    <p class="mileage">Пробег: {{  }}</p>
-                    <p class="frame-type">Класс: {{  }}</p>
-                    <p class="drive-type">Привод: {{  }}</p>
+                    <p class="point">Пробег: {{  }}</p>
+                    <p class="point">Класс: {{  }}</p>
+                    <p class="point">Привод: {{  }}</p>
                 </div>
                 <div v-else class="stats__house">
-                    p.
+                    <p class="point">Площадь: {{  }}</p>
+                    <p class="point">Кол-во комнат: {{  }}</p>
+                    <p class="point">Этаж: {{  }}</p>
                 </div>
             </div>
         </div>

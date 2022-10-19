@@ -17,7 +17,8 @@ export default {
 .widget__container {
     margin: 15px;
     padding: 5px;
-    
+    background-image: url(../assets/left_widget_img.jpg);
+    background-size: cover;
     border: 1px solid transparent;
     border-image: linear-gradient(45deg, #553c9a, #ee4b2b);
     -moz-border-image: -moz-linear-gradient(45deg, #553c9a, #ee4b2b);
@@ -27,8 +28,15 @@ export default {
     /*background-image: linear-gradient(45deg, #553c9a, #ee4b2b); */
 }
 
+.img {
+  display: block;
+}
+
 .text {
-    color: black;
-    font-weight: 500;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    
+    -webkit-text-stroke: 0.5px gray;
 }
 </style>
