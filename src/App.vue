@@ -1,5 +1,5 @@
 <template>
-    <div class="app">
+    <div>
         <top-panel></top-panel>
         <div class="wrap">
             <div class="left-panel">
@@ -11,7 +11,7 @@
             <!-- <div class="line"></div>-->
             <div class="rigth-panel">
                 <div class="right-panel__container">
-                    <img class="img" src="@/assets/home_page_img.jpg" alt="">
+                    <router-view></router-view>
                 </div>
             </div>
         </div>
@@ -104,21 +104,13 @@ form {
 }
 
 .rigth-panel {
-    display: flex;
+    display: inline-block;
     width: 80%;
     height: 100%;
 }
 
-.right-panel__container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.img {
-    margin: 15px;
-    border-radius: 15px;
-    width: 80%;
-}
+
+
 
 </style>
