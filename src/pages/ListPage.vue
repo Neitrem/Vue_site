@@ -13,13 +13,11 @@
 <script>
 import axios from 'axios';
 import ItemCard from '@/components/ItemCard'
-import ItemCard from '@/components/ItemCard.vue';
 
 
 export default {
 	components: {
 		ItemCard
-ItemCard
 	},
 	data() {
 		return {
