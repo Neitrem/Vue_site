@@ -4,7 +4,6 @@
         <div class="wrap">
             <div class="left-panel">
                 <div class="left-panel__container">
-                    <button @click="fetchItems"></button>
                     <nav-panel></nav-panel>
                     <left-widget></left-widget>
                 </div>
@@ -20,10 +19,12 @@
 </template>
 
 <script>
+
 import NavPanel from '@/components/NavPanel';
+
 import TopPanel from '@/components/TopPanel';
+
 import LeftWidget from '@/components/LeftWidget';
-import axios from 'axios';
 
 
 /* eslint-disable vue/no-unused-components */
@@ -42,16 +43,7 @@ export default {
 
         }
     }, 
-    methods: {
-        async fetchItems () {
-            try {
-                const response = await axios.get('http://localhost:3000/items')
-                console.log(response);
-            } catch (e) {
-                alert('Error!');
-            }
-        }
-    }
+    
 }
 </script>
 

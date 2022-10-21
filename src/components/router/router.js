@@ -1,11 +1,15 @@
-import {createRouter ,createWebHistory } from 'vue-router'
-//import {createWebHistory} from 'vue-webhistory'
+import {createRouter, createWebHistory } from 'vue-router'
 import StartPage from '@/pages/StartPage'
+import ListPage from '@/pages/ListPage'
 
 const routes = [
     {
         path: '/',
         component: StartPage
+    },
+    {
+        path: '/list',
+        component: ListPage
     }
 ]
 

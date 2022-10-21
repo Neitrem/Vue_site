@@ -3,13 +3,13 @@
         <div class="nav__container">
             <ul class="list">
                 <li class="list-el">
-                    <a class="link" href="#">Главная</a>
+                    <a class="link" @click="$router.push('/')" href="">Главная</a>
                 </li>
                 <li class="list-el">
-                    <a class="link" href="#">Авто</a>
+                    <a class="link" @click="$router.push('/list')" href="">Авто</a>
                 </li>
                 <li class="list-el">
-                    <a class="link" href="#">Недвижимость</a>
+                    <a class="link" @click="$router.push('/list')" href="">Недвижимость</a>
                 </li>
             </ul>
         </div>
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .nav__container {
     margin:15px;
