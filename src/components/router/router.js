@@ -5,11 +5,14 @@ import ListPage from '@/pages/ListPage'
 const routes = [
     {
         path: '/',
+        name: "main",
         component: StartPage
     },
     {
         path: '/list',
-        component: ListPage
+        name: "ListPage",
+        component: ListPage,
+        props: true
     }
 ]
 

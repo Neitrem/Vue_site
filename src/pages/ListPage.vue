@@ -5,17 +5,19 @@
 			<p class="amount">{{  }}</p>
 		</div>
 		<div class="list">
-			<item-card v-for="item in this.items" v-bind:key="item.id"></item-card>
+			<item-card  v-bind:item="item" v-for="item in this.items" v-bind:key="item.id"></item-card>
 		</div>
 	</div>
 </template>
 
 <script>
-import axios from 'axios';
+
 import ItemCard from '@/components/ItemCard'
 
+import axios from 'axios';
 
 export default {
+
 	components: {
 		ItemCard
 	},
@@ -38,6 +40,7 @@ export default {
 	mounted() {
 		this.fetchItems();
 	}
+	
 }
 </script>
 

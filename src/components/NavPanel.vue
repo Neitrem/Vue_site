@@ -3,13 +3,28 @@
         <div class="nav__container">
             <ul class="list">
                 <li class="list-el">
-                    <a class="link" @click="$router.push('/')" href="">Главная</a>
+                    <router-link 
+                        class="link" 
+                        :to="{ name: 'main'}" 
+                    >
+                        Главная
+                    </router-link>
                 </li>
                 <li class="list-el">
-                    <a class="link" @click="$router.push('/list')" href="">Авто</a>
+                    <router-link 
+                        class="link" 
+                        :to="{ name: 'ListPage',}" 
+                    >
+                        Авто
+                    </router-link>
                 </li>
                 <li class="list-el">
-                    <a class="link" @click="$router.push('/list')" href="">Недвижимость</a>
+                    <router-link 
+                        class="link" 
+                        :to="{ name: 'ListPage',}"
+                    >
+                        Недвижимость
+                    </router-link>
                 </li>
             </ul>
         </div>

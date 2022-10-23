@@ -27,6 +27,7 @@ import TopPanel from '@/components/TopPanel';
 import LeftWidget from '@/components/LeftWidget';
 
 
+
 /* eslint-disable vue/no-unused-components */
 
 /* eslint-disable no-unused-vars */
@@ -40,9 +41,10 @@ export default {
     },
     data () {
         return {
-
+            
         }
-    }, 
+    },
+    
     
 }
 </script>
