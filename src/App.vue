@@ -1,7 +1,10 @@
 <template>
     <div>
+        <form-panel v-if="this.$store.state.isOpenForm"></form-panel>
         <top-panel></top-panel>
+        
         <div class="wrap">
+            
             <div class="left-panel">
                 <div class="left-panel__container">
                     <nav-panel></nav-panel>
@@ -26,7 +29,7 @@ import TopPanel from '@/components/TopPanel';
 
 import LeftWidget from '@/components/LeftWidget';
 
-
+import FormPanel from '@/components/FormPanel'
 
 /* eslint-disable vue/no-unused-components */
 
@@ -37,13 +40,21 @@ import LeftWidget from '@/components/LeftWidget';
 
 export default {
     components: {
-        TopPanel, NavPanel, LeftWidget
+        TopPanel, NavPanel, LeftWidget, FormPanel
     },
     data () {
         return {
             
         }
     },
+    methods: {
+        getNewData(){
+            this.$store.dispatch('getNewData');
+        }
+    },
+    mounted() {
+        this.getNewData();
+    }
     
     
 }
@@ -69,14 +80,13 @@ export default {
 }
 
 .wrap {
-    height: 1000px;
+
     margin: 15px;
     display: flex;
     justify-content: space-between;
 }
 .left-panel {
     width: 20%;
-    height: 100%;
 }
 
 .left-panel__container {
