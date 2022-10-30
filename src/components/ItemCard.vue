@@ -1,7 +1,8 @@
 <template>
   <div class="card">
         <div class="card__container">
-            <img src="" alt="" class="img">
+            <img v-if="this.item.type === 'car'" src="../assets/car_img.jpg" class="img">
+            <img v-else src="../assets/home_img.jpg" class="img">
             <p class="title">{{ this.item.title }}</p>
             <p class="cost">{{ this.item.cost }} $</p>
             <div  class="stats">
@@ -32,5 +33,25 @@ export default {
 </script>
 
 <style>
+.card {
+    position: relative;
+    display: inline-block;
+}
+.card__container {
+    margin: 10px;
+    position: relative;
+    border-radius: 15px;
+    background:  #fff;
+    box-shadow: 1px -1px 5px gray;
+    display: inline-flex;
+    display: block;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+}
 
+.img {
+    width: 250px;
+    height: 250px;
+}
 </style>

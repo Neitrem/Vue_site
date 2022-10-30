@@ -68,31 +68,6 @@ export default {
     font-weight: 600;
 }
 
-.post {
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid teal;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.input {
-    padding: 10px 15px;
-    margin-top: 15px;
-    width: 100%;
-    border: 1px solid teal;
-}
-
-.btn {
-    margin-top: 15px;
-    align-self: flex-end;
-    padding: 10px 15px;
-    background: none;
-}
-
 .wrap {
     height: 1000px;
     margin: 15px;
@@ -115,9 +90,4 @@ form {
     width: 80%;
     height: 100%;
 }
-
-
-
-
-
 </style>

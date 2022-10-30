@@ -13,7 +13,7 @@
                 <li class="list-el">
                     <router-link 
                         class="link" 
-                        :to="{ name: 'ListPage',}" 
+                        :to="{ name: 'list', query: {type: 'car'}}" 
                     >
                         Авто
                     </router-link>
@@ -21,9 +21,17 @@
                 <li class="list-el">
                     <router-link 
                         class="link" 
-                        :to="{ name: 'ListPage',}"
+                        :to="{ name: 'list', query: {type: 'house'}}"
                     >
                         Недвижимость
+                    </router-link>
+                </li>
+                <li class="list-el">
+                    <router-link 
+                        class="link" 
+                        :to="{ name: 'about'}"
+                    >
+                        О нас
                     </router-link>
                 </li>
             </ul>

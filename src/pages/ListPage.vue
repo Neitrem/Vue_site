@@ -5,7 +5,7 @@
 			<p class="amount">{{  }}</p>
 		</div>
 		<div class="list">
-			<item-card  v-bind:item="item" v-for="item in this.items" v-bind:key="item.id"></item-card>
+			<item-card v-bind:item="item" v-for="item in this.items" v-bind:key="item.id"></item-card>
 		</div>
 	</div>
 </template>
@@ -13,7 +13,6 @@
 <script>
 
 import ItemCard from '@/components/ItemCard'
-
 import axios from 'axios';
 
 export default {
@@ -28,17 +27,23 @@ export default {
 	},
 	methods: {
         async fetchItems () {
-            try {
-                const response = await axios.get('http://localhost:3000/items')
-				this.items = response.data;
-                console.log(response);
+            try{ 
+				await axios
+						.get('http://localhost:3000/items')
+						.then(response => (this.items = response.data));
+				this.items = this.items.filter(e => e.type === this.$route.query.type);
             } catch (e) {
                 console.log(e);
             }
         }
     },
-	mounted() {
-		this.fetchItems();
+	watch: {
+		'$route.query.type': {
+			immediate: true,
+			handler() {
+				this.fetchItems();
+			}
+		}
 	}
 	
 }
@@ -46,9 +51,11 @@ export default {
 
 <style scoped>
 .list {
-    display: flex;
-    flex-direction: row;
+	position: relative;
     column-count: 3;
-    justify-content: space-between;
+	column-count: 3;
+    justify-content: space-around;
+	width: 100%;
+	height: 1000px;
 }
 </style>
