@@ -5,7 +5,13 @@ import store from '@/store';
 
 const app = createApp(App)
 
+var
+ cors = require(
+'cors'
+ )
+
 app
+    .use(cors())
     .use(router)
     .use(store)
     .mount('#app');
