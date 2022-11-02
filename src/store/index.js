@@ -29,7 +29,14 @@ export default createStore ({
         async getNewData(context){
             try{ 
                 await axios
-                        .get('http://localhost:3000/items')
+                        .get('http://localhost:3000/items', 
+                        {
+                            headers: {
+                                "Access-Control-Allow-Origin"
+                                : 
+                                "*"
+                                }
+                        })
                         .then(response => (context.commit('setItems', response.data)));
             } catch (e) {
                 console.log(e);
