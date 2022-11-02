@@ -32,10 +32,8 @@ export default createStore ({
                         .get('http://localhost:3000/items', 
                         {
                             headers: {
-                                "Access-Control-Allow-Origin"
-                                : 
-                                "*"
-                                }
+                                "Access-Control-Allow-Origin": "*",
+                            }
                         })
                         .then(response => (context.commit('setItems', response.data)));
             } catch (e) {
