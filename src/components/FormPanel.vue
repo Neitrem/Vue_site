@@ -47,7 +47,7 @@
                     placeholder="Цена" 
                     type="text"
                 >
-                <button @click="createItem">Сохранить</button>
+                <button @click="createItem(); this.$store.commit('changeVisibility')">Сохранить</button>
             </form>
         </div>
     </div>
@@ -74,7 +74,7 @@ export default {
         
         createItem() {
             console.log("new")
-            if(this.$route.query.type === 'car') {
+            if(this.$route.query.type === 'house') {
                 
                 this.$store.commit('addNewItem', { 
                                                 "id": this.$store.getters.getNewID, 

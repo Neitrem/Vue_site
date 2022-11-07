@@ -12,6 +12,18 @@ export default createStore ({
         },
         getNewID(state) {
             return state.items.length + 1;
+        },
+        getAmount(state) {
+            var cars = 0;
+            var houses = 0;
+            state.items.forEach(e => {
+                if (e.type === 'car') {
+                    cars += 1;
+                } else {
+                    houses += 1;
+                }
+            })
+            return {"cars": cars, "houses": houses}
         }
     },
     mutations: {

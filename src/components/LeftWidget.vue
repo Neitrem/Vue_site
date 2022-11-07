@@ -4,6 +4,13 @@
         <p class="text">Наша база ежедневно пополняется десятками самых хороших объявлений по
 лучшей цене</p>
     </div>
+    <div class="stats">
+      <p class="stats__head">
+        Количество объявлений в базе brom.ru:
+      </p>
+      <p class="point">Автомобили: {{ this.$store.getters.getAmount.cars }}</p>
+      <p class="point">Недвижимость: {{ this.$store.getters.getAmount.houses }}</p>
+    </div>
   </div>
 </template>
 
@@ -38,5 +45,13 @@ export default {
     font-size: 20px;
     
     -webkit-text-stroke: 0.5px gray;
+}
+
+.stats {
+  margin: 15px;
+}
+
+.stats__head {
+  font-weight: 600;
 }
 </style>
